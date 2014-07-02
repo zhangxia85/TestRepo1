@@ -1,15 +1,13 @@
-﻿type c = System.Console
+﻿open System
 
-type cc = System.ConsoleColor
-
-let rc = c.ResetColor
-let wl : string -> unit = c.WriteLine
-let rl = c.ReadLine
+let rc = Console.ResetColor
+let wl : string -> unit = Console.WriteLine
+let rl = Console.ReadLine
 
 [<EntryPoint>]
 let main argv = 
-    c.BackgroundColor <- cc.Cyan
-    c.ForegroundColor <- cc.DarkRed
+    Console.BackgroundColor <- ConsoleColor.Cyan
+    Console.ForegroundColor <- ConsoleColor.DarkRed
     wl "Hello F#!"
     rc()
     wl "Press ENTER to exit."
